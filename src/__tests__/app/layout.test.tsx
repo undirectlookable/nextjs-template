@@ -15,7 +15,8 @@ test('renders children inside RootLayout', () => {
   const { getByText } = render(
     <RootLayout>
       <div>Test Child</div>
-    </RootLayout>
+    </RootLayout>,
+    { container: document }
   );
   const childElement = getByText(/Test Child/i);
   expect(childElement).toBeInTheDocument();
